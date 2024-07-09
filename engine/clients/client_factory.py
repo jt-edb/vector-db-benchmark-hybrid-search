@@ -7,50 +7,38 @@ from engine.base_client.client import (
     BaseSearcher,
     BaseUploader,
 )
-from engine.clients.elasticsearch import (
-    ElasticConfigurator,
-    ElasticSearcher,
-    ElasticUploader,
+from engine.clients.pgvectorall import (
+    PgvectorAllConfigurator,
+    PgvectorAllSearcher,
+    PgvectorAllUploader,
 )
-from engine.clients.milvus import MilvusConfigurator, MilvusSearcher, MilvusUploader
-from engine.clients.opensearch import (
-    OpenSearchConfigurator,
-    OpenSearchSearcher,
-    OpenSearchUploader,
+from engine.clients.pgvectorhnsw import (
+    PgvectorHnswConfigurator,
+    PgvectorHnswSearcher,
+    PgvectorHnswUploader,
 )
-from engine.clients.qdrant import QdrantConfigurator, QdrantSearcher, QdrantUploader
-from engine.clients.redis import RedisConfigurator, RedisSearcher, RedisUploader
-from engine.clients.weaviate import (
-    WeaviateConfigurator,
-    WeaviateSearcher,
-    WeaviateUploader,
+from engine.clients.pgvectornohnsw import (
+    PgvectorNoHnswConfigurator,
+    PgvectorNoHnswSearcher,
+    PgvectorNoHnswUploader,
 )
 
 ENGINE_CONFIGURATORS = {
-    "qdrant": QdrantConfigurator,
-    "weaviate": WeaviateConfigurator,
-    "milvus": MilvusConfigurator,
-    "elasticsearch": ElasticConfigurator,
-    "opensearch": OpenSearchConfigurator,
-    "redis": RedisConfigurator,
+    "pgvectorall": PgvectorAllConfigurator,
+    "pgvectorhnsw": PgvectorHnswConfigurator,
+    "pgvectornohnsw": PgvectorNoHnswConfigurator,
 }
 
 ENGINE_UPLOADERS = {
-    "qdrant": QdrantUploader,
-    "weaviate": WeaviateUploader,
-    "milvus": MilvusUploader,
-    "elasticsearch": ElasticUploader,
-    "opensearch": OpenSearchUploader,
-    "redis": RedisUploader,
+    "pgvectorall": PgvectorAllUploader,
+    "pgvectorhnsw": PgvectorHnswUploader,
+    "pgvectornohnsw": PgvectorNoHnswUploader,
 }
 
 ENGINE_SEARCHERS = {
-    "qdrant": QdrantSearcher,
-    "weaviate": WeaviateSearcher,
-    "milvus": MilvusSearcher,
-    "elasticsearch": ElasticSearcher,
-    "opensearch": OpenSearchSearcher,
-    "redis": RedisSearcher,
+    "pgvectorall": PgvectorAllSearcher,
+    "pgvectorhnsw": PgvectorHnswSearcher,
+    "pgvectornohnsw": PgvectorNoHnswSearcher,
 }
 
 

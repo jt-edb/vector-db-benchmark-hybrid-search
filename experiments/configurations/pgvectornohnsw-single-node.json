@@ -1,0 +1,96 @@
+[
+  {
+    "name": "pgvector-no-hnsw-default",
+    "engine": "pgvectornohnsw",
+    "connection_params": {},
+    "collection_params": { "hnsw_config": { "ef_construction": 64, "m": 16 } },
+    "search_params": [
+      { "parallel": 8, "hnsw_config": { "ef_search": 128} }
+    ],
+    "upload_params": { "batch_size": 500, "parallel": 16 }
+  },
+  {
+    "name": "pgvector-no-hnsw-m-16-ef-128",
+    "engine": "pgvectornohnsw",
+    "connection_params": {},
+    "collection_params": { "hnsw_config": { "ef_construction": 128, "m": 16 } },
+    "search_params": [
+      { "parallel": 1, "hnsw_config": { "ef_search": 128} }, { "parallel": 1, "hnsw_config": { "ef_search": 256} }, { "parallel": 1, "hnsw_config": { "ef_search": 512} },
+      { "parallel": 2, "hnsw_config": { "ef_search": 128} }, { "parallel": 2, "hnsw_config": { "ef_search": 256} }, { "parallel": 2, "hnsw_config": { "ef_search": 512} },
+      { "parallel": 4, "hnsw_config": { "ef_search": 128} }, { "parallel": 4, "hnsw_config": { "ef_search": 256} }, { "parallel": 4, "hnsw_config": { "ef_search": 512} },
+      { "parallel": 8, "hnsw_config": { "ef_search": 128} }, { "parallel": 8, "hnsw_config": { "ef_search": 256} }, { "parallel": 8, "hnsw_config": { "ef_search": 512} },
+      { "parallel": 100, "hnsw_config": { "ef_search": 128} }, { "parallel": 100, "hnsw_config": { "ef_search": 256} }, { "parallel": 100, "hnsw_config": { "ef_search": 512} }
+    ],
+    "upload_params": { "batch_size": 500, "parallel": 16 }
+  },
+  {
+    "name": "pgvector-no-hnsw-m-32-ef-128",
+    "engine": "pgvectornohnsw",
+    "connection_params": {},
+    "collection_params": { "hnsw_config": { "ef_construction": 128, "m": 32 } },
+    "search_params": [
+      { "parallel": 1, "hnsw_config": { "ef_search": 128} }, { "parallel": 1, "hnsw_config": { "ef_search": 256} }, { "parallel": 1, "hnsw_config": { "ef_search": 512} },
+      { "parallel": 2, "hnsw_config": { "ef_search": 128} }, { "parallel": 2, "hnsw_config": { "ef_search": 256} }, { "parallel": 2, "hnsw_config": { "ef_search": 512} },
+      { "parallel": 4, "hnsw_config": { "ef_search": 128} }, { "parallel": 4, "hnsw_config": { "ef_search": 256} }, { "parallel": 4, "hnsw_config": { "ef_search": 512} },
+      { "parallel": 8, "hnsw_config": { "ef_search": 128} }, { "parallel": 8, "hnsw_config": { "ef_search": 256} }, { "parallel": 8, "hnsw_config": { "ef_search": 512} },
+      { "parallel": 100, "hnsw_config": { "ef_search": 128} }, { "parallel": 100, "hnsw_config": { "ef_search": 256} }, { "parallel": 100, "hnsw_config": { "ef_search": 512} }
+    ],
+    "upload_params": { "batch_size": 500, "parallel": 16 }
+  },
+  {
+    "name": "pgvector-no-hnsw-m-32-ef-256",
+    "engine": "pgvectornohnsw",
+    "connection_params": {},
+    "collection_params": { "hnsw_config": { "ef_construction": 256, "m": 32 } },
+    "search_params": [
+      { "parallel": 1, "hnsw_config": { "ef_search": 128} }, { "parallel": 1, "hnsw_config": { "ef_search": 256} }, { "parallel": 1, "hnsw_config": { "ef_search": 512} },
+      { "parallel": 2, "hnsw_config": { "ef_search": 128} }, { "parallel": 2, "hnsw_config": { "ef_search": 256} }, { "parallel": 2, "hnsw_config": { "ef_search": 512} },
+      { "parallel": 4, "hnsw_config": { "ef_search": 128} }, { "parallel": 4, "hnsw_config": { "ef_search": 256} }, { "parallel": 4, "hnsw_config": { "ef_search": 512} },
+      { "parallel": 8, "hnsw_config": { "ef_search": 128} }, { "parallel": 8, "hnsw_config": { "ef_search": 256} }, { "parallel": 8, "hnsw_config": { "ef_search": 512} },
+      { "parallel": 100, "hnsw_config": { "ef_search": 128} }, { "parallel": 100, "hnsw_config": { "ef_search": 256} }, { "parallel": 100, "hnsw_config": { "ef_search": 512} }
+    ],
+    "upload_params": { "batch_size": 500, "parallel": 16 }
+  },
+  {
+    "name": "pgvector-no-hnsw-m-32-ef-512",
+    "engine": "pgvectornohnsw",
+    "connection_params": {},
+    "collection_params": { "hnsw_config": { "ef_construction": 512, "m": 32 } },
+    "search_params": [
+      { "parallel": 1, "hnsw_config": { "ef_search": 128} }, { "parallel": 1, "hnsw_config": { "ef_search": 256} }, { "parallel": 1, "hnsw_config": { "ef_search": 512} },
+      { "parallel": 2, "hnsw_config": { "ef_search": 128} }, { "parallel": 2, "hnsw_config": { "ef_search": 256} }, { "parallel": 2, "hnsw_config": { "ef_search": 512} },
+      { "parallel": 4, "hnsw_config": { "ef_search": 128} }, { "parallel": 4, "hnsw_config": { "ef_search": 256} }, { "parallel": 4, "hnsw_config": { "ef_search": 512} },
+      { "parallel": 8, "hnsw_config": { "ef_search": 128} }, { "parallel": 8, "hnsw_config": { "ef_search": 256} }, { "parallel": 8, "hnsw_config": { "ef_search": 512} },
+      { "parallel": 100, "hnsw_config": { "ef_search": 128} }, { "parallel": 100, "hnsw_config": { "ef_search": 256} }, { "parallel": 100, "hnsw_config": { "ef_search": 512} }
+    ],
+    "upload_params": { "batch_size": 500, "parallel": 16 }
+  },
+  {
+    "name": "pgvector-no-hnsw-m-64-ef-256",
+    "engine": "pgvectornohnsw",
+    "connection_params": {},
+    "collection_params": { "hnsw_config": { "ef_construction": 256, "m": 64 } },
+    "search_params": [
+      { "parallel": 1, "hnsw_config": { "ef_search": 128} }, { "parallel": 1, "hnsw_config": { "ef_search": 256} }, { "parallel": 1, "hnsw_config": { "ef_search": 512} },
+      { "parallel": 2, "hnsw_config": { "ef_search": 128} }, { "parallel": 2, "hnsw_config": { "ef_search": 256} }, { "parallel": 2, "hnsw_config": { "ef_search": 512} },
+      { "parallel": 4, "hnsw_config": { "ef_search": 128} }, { "parallel": 4, "hnsw_config": { "ef_search": 256} }, { "parallel": 4, "hnsw_config": { "ef_search": 512} },
+      { "parallel": 8, "hnsw_config": { "ef_search": 128} }, { "parallel": 8, "hnsw_config": { "ef_search": 256} }, { "parallel": 8, "hnsw_config": { "ef_search": 512} },
+      { "parallel": 100, "hnsw_config": { "ef_search": 128} }, { "parallel": 100, "hnsw_config": { "ef_search": 256} }, { "parallel": 100, "hnsw_config": { "ef_search": 512} }
+    ],
+    "upload_params": { "batch_size": 500, "parallel": 16 }
+  },
+  {
+    "name": "pgvector-no-hnsw-m-64-ef-512",
+    "engine": "pgvectornohnsw",
+    "connection_params": {},
+    "collection_params": { "hnsw_config": { "ef_construction": 512, "m": 64 } },
+    "search_params": [
+      { "parallel": 1, "hnsw_config": { "ef_search": 128} }, { "parallel": 1, "hnsw_config": { "ef_search": 256} }, { "parallel": 1, "hnsw_config": { "ef_search": 512} },
+      { "parallel": 2, "hnsw_config": { "ef_search": 128} }, { "parallel": 2, "hnsw_config": { "ef_search": 256} }, { "parallel": 2, "hnsw_config": { "ef_search": 512} },
+      { "parallel": 4, "hnsw_config": { "ef_search": 128} }, { "parallel": 4, "hnsw_config": { "ef_search": 256} }, { "parallel": 4, "hnsw_config": { "ef_search": 512} },
+      { "parallel": 8, "hnsw_config": { "ef_search": 128} }, { "parallel": 8, "hnsw_config": { "ef_search": 256} }, { "parallel": 8, "hnsw_config": { "ef_search": 512} },
+      { "parallel": 100, "hnsw_config": { "ef_search": 128} }, { "parallel": 100, "hnsw_config": { "ef_search": 256} }, { "parallel": 100, "hnsw_config": { "ef_search": 512} }
+    ],
+    "upload_params": { "batch_size": 500, "parallel": 16 }
+  }
+]
